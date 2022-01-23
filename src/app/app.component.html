@@ -1,20 +1,12 @@
 <div class="container">
-  <app-cockpit
+  <app-cockpit 
   (serverCreated) = "onServerAdded($event)"
-  (blueprintCreated) = "onBlueprintAdded($event)"></app-cockpit>
+  (blueprintCreated) = "onBlueprintAdded($event)">
+        </app-cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <button (click)="OnChangeFirst()">Change first element</button>
-      <app-server-element *ngFor="let serverElement of serverElements" [element] = "serverElement">
-      <!-- Everything put between the opeaning and closing tag of our component is removed from DOM by default -->
-      <!-- the below code will be removed from Dom unless it is put under ng content directive in served-element.component.html -->
-      
-      <p>
-        <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
-        <em *ngIf="serverElement.type === 'blueprint'" style="color: blueviolet;">{{ serverElement.content }}</em>
-      </p>
-      </app-server-element>
+<app-server-element *ngFor=" let serverElement of serverElements" [element] = "serverElement"></app-server-element>
     </div>
   </div>
 </div>
