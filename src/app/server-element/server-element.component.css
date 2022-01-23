@@ -1,0 +1,5 @@
+p {
+    color: blue;
+  }
+  /* 
+  in view encapsulation the blueprint tab was earlier was not blue even though the css was still appllied in app component. in order to apply to the CSS we need to put the css into the server element css files */
